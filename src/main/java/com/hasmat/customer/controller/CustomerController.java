@@ -28,6 +28,12 @@ public class CustomerController {
         return  ResponseEntity.status(HttpStatus.CREATED).body(customer1);
     }
 
+     //Welcome page
+     @GetMapping(value = "/home")
+     public String home(){
+         return "Welcome to home.";
+     }
+
     //Get All Customer
     @GetMapping(value = "/all")
     public ResponseEntity<List<Customer>> getAllCustomers(){
